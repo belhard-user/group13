@@ -11,16 +11,6 @@
     <h1>
         <a href="/forum.php">Форум</a>
     </h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-    <h1>Hello world</h1>
-
-    <h1>Hello world!!!</h1>
-    <h1>Hello world!!!!</h1>
-    <h1>Hello world!!!</h1>
+	<h1>Привет ребята</h1>
 </body>
 </html>
