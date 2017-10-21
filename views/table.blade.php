@@ -1,12 +1,6 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title><?= $title ?></title>
-</head>
-<body>
-<h1><?= $pageTitle ?></h1>
+@extends('layouts.main')
 
+@section('content')
 <form action="" method="post">
     <input type="text" name="rows">
     <input type="text" name="cols">
@@ -27,6 +21,6 @@
             <?php endfor; ?>
         </tr>
     <?php endfor ?>
-</table>
-</body>
-</html>
+@endsection
+
+@section('title', 'Таблица умножение')

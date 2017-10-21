@@ -5,12 +5,12 @@ class Page
 {
     public function index()
     {
-        require_once "views/index.view.php";
+        view('index');
     }
 
     public function about()
     {
-        require_once "views/about.view.php";
+        view('about');
     }
 
     public function table()
@@ -31,6 +31,6 @@ class Page
         }
 
 
-        require_once 'views/table.view.php';
+        view('table');
     }
 }

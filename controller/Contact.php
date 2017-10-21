@@ -13,6 +13,6 @@ class Contact
 {
     public function index()
     {
-        require_once "views/phone.view.php";
+       view('phone');
     }
 }
