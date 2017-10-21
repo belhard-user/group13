@@ -1,4 +1,5 @@
 <?php
+namespace Core;
 
 class Router
 {
@@ -19,11 +20,11 @@ class Router
 
     public function getPage()
     {
-        $path = Request::getUri();
+        $path = \Core\Request::getUri();
         if(array_key_exists($path, $this->route)){
             $methods = explode('@', $this->route[$path]);
             $this->runAction(...$methods);
-            
+
             return true;
         }
 
@@ -32,6 +33,8 @@ class Router
 
     public function runAction($class, $method)
     {
+        $class = '\App\\' . $class;
+
         $class = new $class;
         $class->$method();
     }
