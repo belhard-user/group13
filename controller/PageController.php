@@ -1,7 +1,7 @@
 <?php
 namespace App;
 
-class Page
+class PageController
 {
     public function index()
     {
@@ -30,7 +30,6 @@ class Page
             $color = $_POST['color'];
         }
 
-
-        view('table');
+        view('table', compact('rows', 'cols', 'color'));
     }
 }

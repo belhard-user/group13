@@ -1,9 +1,9 @@
 <?php
 
 
-function view($templateName)
+function view($templateName, $variable = [])
 {
-    $html = \Core\App::get('engine')->view()->make($templateName)->render();
+    $html = \Core\App::get('engine')->view()->make($templateName, $variable)->render();
 
     echo $html;
 }

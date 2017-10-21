@@ -10,17 +10,23 @@
 <hr>
 
 <table border="1">
-    <?php for($i = 1; $i <= $rows; $i++): ?>
+    @for($i = 1; $i <= $rows; $i++)
         <tr>
-            <?php for($j = 1; $j <= $cols; $j++): ?>
-                <?php if($i == 1 || $j == 1): ?>
-                    <td style="background: <?= $color ?>"><?= $i * $j ?></td>
-                <?php else: ?>
-                    <td><?= $i * $j ?></td>
-                <?php endif; ?>
-            <?php endfor; ?>
+            @for($j = 1; $j <= $cols; $j++)
+                @if($i == 1 || $j == 1)
+                    <td style="background: <?= $color ?>">{{ $i * $j }}</td>
+                @else
+                    <td>{{ $i * $j }}</td>
+                @endif
+            @endfor
         </tr>
-    <?php endfor ?>
+    @endfor
 @endsection
 
 @section('title', 'Таблица умножение')
+
+@section('menu')
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">hjassdahjsadasdasd</a>
+    </li>
+@endsection
