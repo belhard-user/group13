@@ -1,5 +1,5 @@
 <?php
 
-$router->add('', 'controller/index.php');
-$router->add('table', 'controller/table.php');
-$router->add('about', 'controller/about.php');
+$router->add('', 'Page@index');
+$router->add('table', 'Page@table');
+$router->add('about', 'Page@about');

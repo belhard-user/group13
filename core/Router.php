@@ -21,9 +21,18 @@ class Router
     {
         $path = Request::getUri();
         if(array_key_exists($path, $this->route)){
-            return $this->route[$path];
+            $methods = explode('@', $this->route[$path]);
+            $this->runAction(...$methods);
+            
+            return true;
         }
 
         throw new \Exception('Route Not Found');
+    }
+
+    public function runAction($class, $method)
+    {
+        $class = new $class;
+        $class->$method();
     }
 }
