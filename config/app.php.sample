@@ -1,0 +1,13 @@
+<?php
+
+return [
+    'database' => [
+        'host' => 'localhost',
+        'user' => 'root',
+        'password' => '',
+        'dbname' => 'study',
+        'options' => [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
+        ]
+    ]
+];
