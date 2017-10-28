@@ -10,4 +10,9 @@ class Request
 
         return $path;
     }
+
+    public static function getRequest($key, $default=null)
+    {
+        return array_key_exists($key, $_REQUEST) ? $_REQUEST[$key] : $default;
+    }
 }

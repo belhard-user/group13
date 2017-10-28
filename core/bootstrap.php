@@ -15,5 +15,6 @@ $blade = new Blade($views, $cache);
 
 App::set('engine', $blade);
 $dbConnector = new DBConnector($config['database']);
-App::set('db', $dbConnector->getDb());
+$queryBuilder = new \Core\DB\QueryBuilder($dbConnector->getDb());
+App::set('queryBuilder', $queryBuilder);
 App::set('config', $config);
